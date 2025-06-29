@@ -1,0 +1,11 @@
+FROM php:8.2-cli
+
+# نصب PHP Server و کپی فایل‌ها
+COPY . /usr/src/myapp
+WORKDIR /usr/src/myapp
+
+# باز کردن پورت
+EXPOSE 8000
+
+# اجرای PHP سرور ساده
+CMD ["php", "-S", "0.0.0.0:8000"]
